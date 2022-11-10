@@ -25,7 +25,7 @@ async function main() {
   // const wallet = ethers.Wallet.fromMnemonic(process.env.MNEMONIC ?? "");
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY ?? ""); // Creates new wallet from private key
   const signer = wallet.connect(provider)
-  console.log(`this address has balance ${signer.address} wei`)
+  console.log(`this address has balance ${signer.address}`)
   const balance = await signer.getBalance();
   console.log(`this address has balance ${balance} wei`)
   // const ballotFactory = await ethers.getContractFactory("Ballot");
